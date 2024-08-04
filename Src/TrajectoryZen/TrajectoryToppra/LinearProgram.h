@@ -8,13 +8,11 @@
  */
 
 #pragma once
-#include <trajectoryzen_export.h>
+#include <TrajectoryZen/trajectoryzen_export.h>
 #include <vector>
-#include <span>
 
 namespace tz
 {
-
 namespace lp
 {
 ///@brief minimize ax + by

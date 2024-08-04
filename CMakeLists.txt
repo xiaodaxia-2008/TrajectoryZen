@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.20)
 
 option(BUILD_SHARED_LIBS "Build shared libraries" ON)
-option(TrajectoryZen_BUILD_EXAMPLES "Build examples" OFF)
-option(TrajectoryZen_BUILD_BENCHMARKS "Build benchmarks" OFF)
+option(TrajectoryZen_BUILD_EXAMPLE "Build example" OFF)
+option(TrajectoryZen_BUILD_TEST "Build test" OFF)
 
 project(TrajectoryZen LANGUAGES CXX
     VERSION 0.0.1
@@ -28,10 +28,10 @@ include_directories(${PROJECT_SOURCE_DIR}/Src)
 
 add_subdirectory(Src/TrajectoryZen)
 
-if(TrajectoryZen_BUILD_EXAMPLES)
-    add_subdirectory(Examples)
+if(TrajectoryZen_BUILD_EXAMPLE)
+    add_subdirectory(Example)
 endif()
 
-if(TrajectoryZen_BUILD_BENCHMARKS)
-    add_subdirectory(Benchmarks)
+if(TrajectoryZen_BUILD_TEST)
+    add_subdirectory(Test)
 endif()
